@@ -1,17 +1,15 @@
 name: Hello World Workflow
 
-
 on:
-    push:
+  push:
 
 jobs:
-    hello_world_job:
-        runs-on: ubuntu-latest
+  hello_world_job:
+    runs-on: ubuntu-latest
 
-        steps:
-        -name: Checkout repository content
-         uses: actions/checkout@v5
-
-
-         - name: Run a one-line script
-           run: echo "Hello, World!"
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v5
+      
+    - name: Run a one-line script
+      run: echo "Hello, World!"
